@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio3</title>
+</head>
+
+<body>
+    <div class="main">
+        <h1>Ingresa el password</h1>
+
+        <div class="number">
+            <input id="number-1" type="number" min="1" max="9">
+            <input id="number-2" type="number" min="1" max="9">
+            <input id="number-3" type="number" min="1" max="9">
+        </div>
+        <div class="ingreso">
+            <p id="claveInfo"></p>
+            <button onclick="
+                let userInfo = document.querySelector('#claveInfo');
+                let clave1 = document.querySelector('#number-1').value;
+                let clave2 = document.querySelector('#number-2').value;
+                let clave3 = document.querySelector('#number-3').value;
+
+                let claveUsuario = Number(clave1 + clave2 + clave3);
+
+                if (claveUsuario == 911) {
+                    userInfo.innerHTML = 'password 1 correcto';
+                } else if (claveUsuario == 714) {
+                    userInfo.innerHTML = 'password 2 correcto';
+                } else {
+                    userInfo.innerHTML = 'password incorrecto';
+                }
+
+            ">Ingresar</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

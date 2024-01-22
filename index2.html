@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style2.css">
+    <title>Ejercicio2</title>
+</head>
+
+<body>
+    <div class="title">
+        <h3>Puedes llevar hasta 10 stickers en total</h3>
+    </div>
+    <div class="main">
+        <div class="etiqueta">
+            <div class="card">
+                <img class="etiqueta_img" src="/assets/img/img_ejer2/bombilla.png" alt="">
+                <div class="etiqueta_info">
+                    <input id="etiqueta_1" type="number" min="0" max="10">
+                </div>
+            </div>
+        </div>
+        <div class="etiqueta">
+            <div class="card">
+                <img class="etiqueta_img" src="assets/img/img_ejer2/cinta-de-casete.png" alt="">
+                <div class="etiqueta_info">
+                    <input id="etiqueta_2" type="number" min="0" max="10">
+                </div>
+            </div>
+        </div>
+        <div class="etiqueta">
+            <div class="card">
+                <img class="etiqueta_img" src="assets/img/img_ejer2/creatividad.png" alt="">
+                <div class="etiqueta_info">
+                    <input id="etiqueta_3" type="number" min="0" max="10">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="information">
+        <p id="info"></p>
+        <button onclick="
+            let info = document.querySelector('#info');
+            let qty1 = Number(document.querySelector('#etiqueta_1').value);
+            let qty2 = Number(document.querySelector('#etiqueta_2').value);
+            let qty3 = Number(document.querySelector('#etiqueta_3').value);
+            
+            let suma = qty1 + qty2 + qty3;
+
+            if (suma >= 1 && suma <= 10) {
+                info.innerHTML = String('Tienes ' + suma + ' stickers seleccionados');
+            }  else {
+                info.innerHTML = String('Tienes demasiados stickers');
+            }
+
+        ">Verificar</button>
+    </div>
+</body>
+
+</html>
